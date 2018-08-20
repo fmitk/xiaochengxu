@@ -1,3 +1,6 @@
 #imgpano{
     width:100%;
 }
+#imgview{
+    margin-top: -40px;
+}

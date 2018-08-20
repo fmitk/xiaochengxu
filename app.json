@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/comment/comment"
+        "pages/comment/comment",
+        "pages/vrshow/vrshow"
     ],
     "window": {
         "backgroundTextStyle": "light",

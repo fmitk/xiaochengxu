@@ -50,6 +50,7 @@ App({
     },
     globalData: {
         openid:null,
+        senduserInfo:true,
     }
 
 })

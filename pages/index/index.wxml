@@ -1,6 +1,4 @@
-<view>
-    <image src='http://localhost/output-4/pano.png' mode='aspectFit' id="imgpano" bindtap='comment'></image>
-</view>
 
- 
- 
+<view wx:for="{{panoInfo}}" id="imgview">
+    <image src="{{item.panolink}}/pano.png" mode='aspectFit' id="imgpano" bindtap='comment'data-imgpath="{{item.panolink}}"></image>
+</view>

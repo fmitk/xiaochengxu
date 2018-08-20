@@ -4,29 +4,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-      panoInfo:null,
+      vrpath:null,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      var that=this;
-      wx.request({
-          url: 'http://127.0.0.1:5000/panoInfo',
-          data: '',
-          header: {},
-          method: 'GET',
-          dataType: 'json',
-          responseType: 'text',
-          success: function(res) {
-              console.log(res['data']);
-              that.setData({
-                  panoInfo:res['data']
-              })
-          },
-          fail: function(res) {},
-          complete: function(res) {},
+      console.log(options)
+      this.setData({
+          vrpath:options['vrpath']
       })
   },
 
@@ -34,7 +22,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-      
+    
   },
 
   /**
@@ -77,13 +65,5 @@ Page({
    */
   onShareAppMessage: function () {
     
-  },
-  comment:function(e){
-      //console.log(e.target.dataset['imgpath'])
-      var imgpath = e.target.dataset['imgpath'];
-      wx.navigateTo({
-           url:'../comment/comment?imgpath='+imgpath
-      })
-  },
-  
+  }
 })
