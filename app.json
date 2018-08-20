@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/comment/comment"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "green",
+        "navigationBarTitleText": "最行走",
+        "navigationBarTextStyle": "black"
+    }
+}

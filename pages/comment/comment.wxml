@@ -1,0 +1,14 @@
+<scroll-view>
+    <view>
+        <image src="http://localhost/output-4/pano.png" id="imgpano" mode='aspectFit'></image>
+    </view>
+    <view style='width:100%;height:250px;border:1px solid #000'>
+    </view>
+    <button open-type='getUserInfo' bindgetuserinfo="userInfoHandler" disabled="{{onlyone}}">点击授权</button>
+</scroll-view>
+<view style='margin-top:100px'>
+    <form bindsubmit="formSubmit">
+        <input id="comment" type='text' focus='false' name='comment'></input>
+        <button type="primary" size='mini' formType="submit">发送</button>
+    </form>
+</view>

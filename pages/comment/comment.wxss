@@ -1,0 +1,7 @@
+#imgpano{
+    width:100%;
+}
+#comment{
+    border:1px solid #000;
+    width: 70%;
+}
