@@ -1,1 +1,1 @@
-<web-view src="{{vrpath}}"></web-view>
+<web-view src="{{vrpath}}/index.html"></web-view>

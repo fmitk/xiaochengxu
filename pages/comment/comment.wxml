@@ -1,13 +1,46 @@
-<scroll-view>
+<view>
     <view>
-        <image src="{{imgpath}}/pano.png" id="imgpano" mode='aspectFit' bindtap="vrshow" data-vrpath='{{imgpath}}'></image>
+        <image src="{{imgpath}}/pano.png" id="imgpano" mode='scaleToFill' bindtap="vrshow" data-vrpath='{{imgpath}}'></image>
     </view>
-    <view style='width:100%;height:250px;border:1px solid #000'>
-    </view>
-</scroll-view>
-<view style='margin-top:100px'>
+
+    <scroll-view id='userarea'>
+        <view style='color:#fff;text-align:center;' id='vrshow'>点击上方图片方可加载</view>
+        <view style='width:100%;height:160px;border-bottom:0px solid #fff;'></view>
+        <view style='height:25px;border-bottom:1px solid #fff;'>
+            <text style='color:#fff;font-size:small;margin-left:30rpx;'>留下你精彩的评论</text>
+            <text style='color:#fff;font-size:small;margin-left:300rpx;'>有{{length}}条评论</text>
+        </view>
+        <view style='width:100%;'>
+            <view style='width:100%;border-bottom:0px solid #fff'>
+                <view id='commenttext' wx:for="{{commentInfos}}">
+                    <view style='height:40px;border:0px solid #fff;display: -webkit-flex;'>
+                        <image id='userAvatar' src='{{item.avatarUrl}}'></image>
+                        <view style='width:170px;margin-top:5px;'><text style='color:#fff;font-size:small;font-weight:bold;margin-top:9px;margin-left:10rpx;'>{{item.nickName}}</text></view>
+                        <view style='margin-top:5px;text-align:right;'><text style='color:#fff;font-size:small;'>{{item.time}}</text></view>
+                    </view>
+                    <view style='margin-left:79rpx;border:0px solid #fff;'>
+                        <text style='color:#fff;font-size:small;position:relative;top:-5px;'>{{item.comment}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view style='text-align:center;font-size:small;color:#fff;'>
+            2018 最行走
+        </view>
+        <view style='width:100%;height:180px;border-bottom:0px solid #fff;'></view>
+    </scroll-view>
+</view>
+<view style='bottom:0rpx;position:fixed;width:100%;flex-direction:row;height:80rpx;border-top:1rpx solid #fff;background: #484848;'>
     <form bindsubmit="formSubmit">
-        <input id="comment" type='text' focus='false' name='comment'></input>
-        <button type="primary" size='mini' formType="submit" open-type='getUserInfo' bindgetuserinfo="userInfoHandler">发送</button>
+        <view id='bottombar'>
+            <view style='width:40%'>
+                <input id="comment" confirm-type='send' type='text' name='comment' value='{{inputvalue}}' placeholder='请输入评论...' placeholder-style='font-size:small;color:#B0B0B0;'></input>
+            </view>
+            <view>
+                <button  wx:if="{{btndata==true}}" id='sendbtn' size='mini' formType="submit" bindtap='oncetran'>发送</button>
+                <button  wx:else id='sendbtn' size='mini' open-type='openSetting' bindtap='transdata'>授权</button>
+            </view>
+            
+        </view>
     </form>
 </view>

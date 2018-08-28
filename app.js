@@ -10,7 +10,7 @@ App({
                 if (res.code) {
                     //发起网络请求
                     wx.request({
-                        url: 'http://127.0.0.1:5000/getcode',
+                        url: 'https://www.zxz2017.cn/flask/getcode',
                         data: {
                             code: res.code
                         },
@@ -51,6 +51,7 @@ App({
     globalData: {
         openid:null,
         senduserInfo:true,
+        gbtndata:true,
     }
 
 })

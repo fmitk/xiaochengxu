@@ -2,12 +2,36 @@
     "pages": [
         "pages/index/index",
         "pages/comment/comment",
-        "pages/vrshow/vrshow"
+        "pages/vrshow/vrshow",
+        "pages/eating/eating"
     ],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "green",
+        "backgroundTextStyle": "ligth",
+        "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "最行走",
         "navigationBarTextStyle": "black"
+    },
+    "tabBar":{
+        "color": "#000000",
+        "selectedColor": "#000000",
+        "backgroundColor": "#fff",
+        "list":[
+            {
+                "pagePath":"pages/index/index",
+                "text":"首页"
+            },
+            {
+                "pagePath": "pages/eating/eating",
+                "text": "VR视频"
+            },
+            {
+                "pagePath":"pages/eating/eating",
+                "text":"发现"
+            },
+            {
+                "pagePath":"pages/eating/eating",
+                "text":"关于"
+            }
+        ]
     }
 }

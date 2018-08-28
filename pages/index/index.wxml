@@ -1,4 +1,4 @@
-
-<view wx:for="{{panoInfo}}" id="imgview">
-    <image src="{{item.panolink}}/pano.png" mode='aspectFit' id="imgpano" bindtap='comment'data-imgpath="{{item.panolink}}"></image>
+<view wx:for="{{panoInfo}}" id='imgview'>
+    <button id='btn' style='background-image: url("{{item.panolink}}/pano.png");' bindtap='comment' data-imgpath="{{item.panolink}}" data-panoid="{{item.panoid}}" open-type='getUserInfo' bindgetuserinfo="userInfoHandler">
+    </button>
 </view>
